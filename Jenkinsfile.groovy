@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: "${GITHUB_CREDENTIALS_ID}", url: 'https://github.com/Rohanm0702/Jenkins.git'
+                git credentialsId: "${GITHUB_CREDENTIALS_ID}", url: 'https://github.com/Rohanm0702/Jenkins.git', branch: 'main'
             }
         }
         stage('Build Docker Image') {
